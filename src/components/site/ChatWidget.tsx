@@ -105,7 +105,7 @@ export function ChatWidget() {
                       : "max-w-[90%] whitespace-pre-wrap text-sm text-foreground"
                   }
                 >
-                  {m.content}
+                  {m.role === "assistant" ? renderRich(m.content) : m.content}
                 </div>
               </div>
             ))}
