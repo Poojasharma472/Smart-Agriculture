@@ -104,7 +104,7 @@ export type YieldInput = {
 };
 
 export function predictYield({ crop, rainfall, pesticide, temperature }: YieldInput) {
-  const profile = CROPS.find((c) => c.name === crop) ?? CROPS[0];
+  const profile = CROPS.find((c) => c.name === crop) ?? CROPS[0]!;
   const base = profile.yieldKg;
   const rainScore = inRange(rainfall, profile.rain);
   const tempScore = inRange(temperature, profile.temp);
@@ -185,7 +185,7 @@ const NPK_BASE: Record<string, [number, number, number]> = {
 };
 
 export function recommendFertilizer(i: FertilizerInput) {
-  const base = NPK_BASE[i.crop] ?? [120, 60, 40];
+  const base: [number, number, number] = NPK_BASE[i.crop] ?? [120, 60, 40];
   const soilAdj: Record<SoilType, number> = { loamy: 1, clay: 0.95, sandy: 1.15, black: 0.9, red: 1.08, silt: 1 };
   const rainAdj = i.rainfall > 1200 ? 1.1 : i.rainfall < 600 ? 0.92 : 1;
   const phAdj = i.ph === "acidic" ? 1.08 : i.ph === "alkaline" ? 1.05 : 1;
