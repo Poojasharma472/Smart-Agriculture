@@ -10,33 +10,128 @@
 
 import { Route as rootRouteImport } from './routes/__root'
 import { Route as IndexRouteImport } from './routes/index'
+import { Route as AboutRouteImport } from './routes/about'
+import { Route as CropRecommendationRouteImport } from './routes/crop-recommendation'
+import { Route as DiseaseDetectionRouteImport } from './routes/disease-detection'
+import { Route as FarmerConnectRouteImport } from './routes/farmer-connect'
+import { Route as FertilizerRouteImport } from './routes/fertilizer'
+import { Route as YieldPredictionRouteImport } from './routes/yield-prediction'
+import { Route as ApiChatRouteImport } from './routes/api/chat'
 
 const IndexRoute = IndexRouteImport.update({
   id: '/',
   path: '/',
   getParentRoute: () => rootRouteImport,
 } as any)
+const AboutRoute = AboutRouteImport.update({
+  id: '/about',
+  path: '/about',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const CropRecommendationRoute = CropRecommendationRouteImport.update({
+  id: '/crop-recommendation',
+  path: '/crop-recommendation',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const DiseaseDetectionRoute = DiseaseDetectionRouteImport.update({
+  id: '/disease-detection',
+  path: '/disease-detection',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const FarmerConnectRoute = FarmerConnectRouteImport.update({
+  id: '/farmer-connect',
+  path: '/farmer-connect',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const FertilizerRoute = FertilizerRouteImport.update({
+  id: '/fertilizer',
+  path: '/fertilizer',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const YieldPredictionRoute = YieldPredictionRouteImport.update({
+  id: '/yield-prediction',
+  path: '/yield-prediction',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const ApiChatRoute = ApiChatRouteImport.update({
+  id: '/api/chat',
+  path: '/api/chat',
+  getParentRoute: () => rootRouteImport,
+} as any)
 
 export interface FileRoutesByFullPath {
   '/': typeof IndexRoute
+  '/about': typeof AboutRoute
+  '/crop-recommendation': typeof CropRecommendationRoute
+  '/disease-detection': typeof DiseaseDetectionRoute
+  '/farmer-connect': typeof FarmerConnectRoute
+  '/fertilizer': typeof FertilizerRoute
+  '/yield-prediction': typeof YieldPredictionRoute
+  '/api/chat': typeof ApiChatRoute
 }
 export interface FileRoutesByTo {
   '/': typeof IndexRoute
+  '/about': typeof AboutRoute
+  '/crop-recommendation': typeof CropRecommendationRoute
+  '/disease-detection': typeof DiseaseDetectionRoute
+  '/farmer-connect': typeof FarmerConnectRoute
+  '/fertilizer': typeof FertilizerRoute
+  '/yield-prediction': typeof YieldPredictionRoute
+  '/api/chat': typeof ApiChatRoute
 }
 export interface FileRoutesById {
   __root__: typeof rootRouteImport
   '/': typeof IndexRoute
+  '/about': typeof AboutRoute
+  '/crop-recommendation': typeof CropRecommendationRoute
+  '/disease-detection': typeof DiseaseDetectionRoute
+  '/farmer-connect': typeof FarmerConnectRoute
+  '/fertilizer': typeof FertilizerRoute
+  '/yield-prediction': typeof YieldPredictionRoute
+  '/api/chat': typeof ApiChatRoute
 }
 export interface FileRouteTypes {
   fileRoutesByFullPath: FileRoutesByFullPath
-  fullPaths: '/'
+  fullPaths:
+    | '/'
+    | '/about'
+    | '/crop-recommendation'
+    | '/disease-detection'
+    | '/farmer-connect'
+    | '/fertilizer'
+    | '/yield-prediction'
+    | '/api/chat'
   fileRoutesByTo: FileRoutesByTo
-  to: '/'
-  id: '__root__' | '/'
+  to:
+    | '/'
+    | '/about'
+    | '/crop-recommendation'
+    | '/disease-detection'
+    | '/farmer-connect'
+    | '/fertilizer'
+    | '/yield-prediction'
+    | '/api/chat'
+  id:
+    | '__root__'
+    | '/'
+    | '/about'
+    | '/crop-recommendation'
+    | '/disease-detection'
+    | '/farmer-connect'
+    | '/fertilizer'
+    | '/yield-prediction'
+    | '/api/chat'
   fileRoutesById: FileRoutesById
 }
 export interface RootRouteChildren {
   IndexRoute: typeof IndexRoute
+  AboutRoute: typeof AboutRoute
+  CropRecommendationRoute: typeof CropRecommendationRoute
+  DiseaseDetectionRoute: typeof DiseaseDetectionRoute
+  FarmerConnectRoute: typeof FarmerConnectRoute
+  FertilizerRoute: typeof FertilizerRoute
+  YieldPredictionRoute: typeof YieldPredictionRoute
+  ApiChatRoute: typeof ApiChatRoute
 }
 
 declare module '@tanstack/react-router' {
@@ -48,11 +143,67 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof IndexRouteImport
       parentRoute: typeof rootRouteImport
     }
+    '/about': {
+      id: '/about'
+      path: '/about'
+      fullPath: '/about'
+      preLoaderRoute: typeof AboutRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/crop-recommendation': {
+      id: '/crop-recommendation'
+      path: '/crop-recommendation'
+      fullPath: '/crop-recommendation'
+      preLoaderRoute: typeof CropRecommendationRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/disease-detection': {
+      id: '/disease-detection'
+      path: '/disease-detection'
+      fullPath: '/disease-detection'
+      preLoaderRoute: typeof DiseaseDetectionRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/farmer-connect': {
+      id: '/farmer-connect'
+      path: '/farmer-connect'
+      fullPath: '/farmer-connect'
+      preLoaderRoute: typeof FarmerConnectRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/fertilizer': {
+      id: '/fertilizer'
+      path: '/fertilizer'
+      fullPath: '/fertilizer'
+      preLoaderRoute: typeof FertilizerRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/yield-prediction': {
+      id: '/yield-prediction'
+      path: '/yield-prediction'
+      fullPath: '/yield-prediction'
+      preLoaderRoute: typeof YieldPredictionRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/api/chat': {
+      id: '/api/chat'
+      path: '/api/chat'
+      fullPath: '/api/chat'
+      preLoaderRoute: typeof ApiChatRouteImport
+      parentRoute: typeof rootRouteImport
+    }
   }
 }
 
 const rootRouteChildren: RootRouteChildren = {
   IndexRoute: IndexRoute,
+  AboutRoute: AboutRoute,
+  CropRecommendationRoute: CropRecommendationRoute,
+  DiseaseDetectionRoute: DiseaseDetectionRoute,
+  FarmerConnectRoute: FarmerConnectRoute,
+  FertilizerRoute: FertilizerRoute,
+  YieldPredictionRoute: YieldPredictionRoute,
+  ApiChatRoute: ApiChatRoute,
 }
 export const routeTree = rootRouteImport
   ._addFileChildren(rootRouteChildren)
