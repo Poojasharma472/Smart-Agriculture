@@ -20,10 +20,10 @@ export const Route = createFileRoute("/")({
         content:
           "AgriPredict gives farmers AI crop recommendations, yield forecasts, disease risk alerts, fertilizer plans and a 24/7 AI farming assistant.",
       },
-      { property: "og:title", content: "AgriPredict — Smart Farming with AI Predictions" },
+      { property: "og:title", content: "AgriPredict — AI Crop, Yield & Disease Predictions for Farmers" },
       {
         property: "og:description",
-        content: "AI crop recommendations, yield forecasts, disease alerts and fertilizer guidance in one platform.",
+        content: "AgriPredict gives farmers AI crop recommendations, yield forecasts, disease risk alerts, fertilizer plans and a 24/7 AI farming assistant.",
       },
       { property: "og:type", content: "website" },
       { name: "twitter:card", content: "summary_large_image" },

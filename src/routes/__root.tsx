@@ -81,20 +81,24 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
     meta: [
       { charSet: "utf-8" },
       { name: "viewport", content: "width=device-width, initial-scale=1" },
-      { title: "AgriPredict — Smart Farming with AI Predictions" },
+      { title: "AgriPredict — AI Crop, Yield & Disease Predictions for Farmers" },
       {
         name: "description",
         content:
-          "AI crop recommendations, yield forecasts, disease risk alerts and fertilizer plans for modern farmers.",
+          "AgriPredict gives farmers AI crop recommendations, yield forecasts, disease risk alerts, fertilizer plans and a 24/7 AI farming assistant.",
       },
       { name: "author", content: "AgriPredict" },
-      { property: "og:title", content: "AgriPredict — Smart Farming with AI Predictions" },
+      { property: "og:title", content: "AgriPredict — AI Crop, Yield & Disease Predictions for Farmers" },
       {
         property: "og:description",
-        content: "AI crop recommendations, yield forecasts, disease alerts and fertilizer guidance in one platform.",
+        content: "AgriPredict gives farmers AI crop recommendations, yield forecasts, disease risk alerts, fertilizer plans and a 24/7 AI farming assistant.",
       },
       { property: "og:type", content: "website" },
       { name: "twitter:card", content: "summary_large_image" },
+      { name: "twitter:title", content: "AgriPredict — AI Crop, Yield & Disease Predictions for Farmers" },
+      { name: "twitter:description", content: "AgriPredict gives farmers AI crop recommendations, yield forecasts, disease risk alerts, fertilizer plans and a 24/7 AI farming assistant." },
+      { property: "og:image", content: "https://storage.googleapis.com/gpt-engineer-file-uploads/attachments/og-images/68fd512f-b1db-497b-a522-b746507919b8" },
+      { name: "twitter:image", content: "https://storage.googleapis.com/gpt-engineer-file-uploads/attachments/og-images/68fd512f-b1db-497b-a522-b746507919b8" },
     ],
     links: [
       { rel: "preconnect", href: "https://fonts.googleapis.com" },
@@ -107,7 +111,6 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
         rel: "stylesheet",
         href: appCss,
       },
-      { rel: "icon", href: "/favicon.ico", type: "image/x-icon" },
     ],
 
   }),
