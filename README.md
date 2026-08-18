@@ -1,4 +1,4 @@
-# Agri Predict AI
+# Smart Agriculture
 
 make an website with anem agripredict add this feature and add additional ai feature and ai chatbox on lower left bottomm side and make it attractive and perfect
 
